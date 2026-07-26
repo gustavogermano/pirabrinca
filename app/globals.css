@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink-800 font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-ink-900;
+  }
+
+  ::selection {
+    @apply bg-pink-200 text-pink-900;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.pink.500");
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
