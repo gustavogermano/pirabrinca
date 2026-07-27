@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { fadeUp, staggerContainer, revealOnView } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
 
 const tias = [
-  { src: "/images/tia na.jpeg", alt: "Tia Na", name: "Tia Na" },
-  { src: "/images/tia ana.jpeg", alt: "Tia Ana", name: "Tia Ana" },
+  { src: assetPath("/images/tia na.jpeg"), alt: "Tia Na", name: "Tia Na" },
+  { src: assetPath("/images/tia ana.jpeg"), alt: "Tia Ana", name: "Tia Ana" },
 ];
 
 export function GaleriaSection() {

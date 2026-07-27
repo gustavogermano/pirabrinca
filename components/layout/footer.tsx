@@ -3,6 +3,7 @@ import { Instagram, MessageCircle, MapPin } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { getWhatsAppLink, INSTAGRAM_URL, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 import { CONTACT, NAV_LINKS } from "@/lib/constants";
+import { assetPath } from "@/lib/utils";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -14,7 +15,7 @@ export function Footer() {
           <div className="flex items-center gap-2.5">
             <div className="relative h-11 w-11 overflow-hidden rounded-2xl bg-pink-500">
               <Image
-                src="/images/logo.jpg"
+                src={assetPath("/images/logo.jpg")}
                 alt="Logo Pirabrinca"
                 fill
                 sizes="44px"

@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { brincadeiras } from "@/features/brincadeiras";
 import { fadeUp, staggerContainer, revealOnView, fadeLeft } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
 
 export function BrincadeirasSection() {
   return (
@@ -21,7 +22,7 @@ export function BrincadeirasSection() {
           >
             <div className="relative aspect-[3/4] overflow-hidden rounded-4xl bg-white shadow-soft">
               <Image
-                src="/images/brincadeiras.jpg"
+                src={assetPath("/images/brincadeiras.jpg")}
                 alt="Lista ilustrada das brincadeiras Pirabrinca"
                 fill
                 sizes="(max-width: 1024px) 90vw, 420px"

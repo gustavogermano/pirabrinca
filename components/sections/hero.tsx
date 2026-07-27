@@ -9,6 +9,7 @@ import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { BlobShape } from "@/components/shared/blob-shape";
 import { useParallaxBlob } from "@/hooks/use-parallax-blob";
 import { fadeLeft, fadeRight, staggerContainer, fadeUp } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
 
 export function Hero() {
   const { ref, springX, springY } = useParallaxBlob(24);
@@ -132,7 +133,7 @@ export function Hero() {
           >
             <div className="relative h-full w-full overflow-hidden rounded-[2.4rem] bg-pink-500">
               <Image
-                src="/images/logo.jpg"
+                src={assetPath("/images/logo.jpg")}
                 alt="Mascotes Pirabrinca dando risada, segurando baldinhos de água"
                 fill
                 sizes="(max-width: 768px) 90vw, 420px"

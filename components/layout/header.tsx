@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/container";
 import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
 import { NAV_LINKS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
+import { assetPath, cn } from "@/lib/utils";
 
 export function Header() {
   const scrolled = useScrollProgress();
@@ -28,7 +28,7 @@ export function Header() {
         <Link href="#home" className="flex items-center gap-2">
           <div className="relative h-11 w-11 overflow-hidden rounded-2xl bg-pink-500 shadow-card">
             <Image
-              src="/images/logo.jpg"
+              src={assetPath("/images/logo.jpg")}
               alt="Logo Pirabrinca Recreação Infantil"
               fill
               sizes="44px"

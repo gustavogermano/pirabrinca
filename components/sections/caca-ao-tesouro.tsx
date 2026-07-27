@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Brain, Compass, HeartHandshake, Users } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { fadeLeft, fadeRight, fadeUp, revealOnView, staggerContainer } from "@/lib/motion";
+import { assetPath } from "@/lib/utils";
 
 const skills = [
   { label: "Criatividade", icon: Compass },
@@ -78,7 +79,7 @@ export function CacaAoTesouro() {
         >
           <div className="relative aspect-[4/5] overflow-hidden rounded-4xl shadow-soft">
             <Image
-              src="/images/caca-ao-tesouro.jpg"
+              src={assetPath("/images/caca-ao-tesouro.jpg")}
               alt="Ilustração da Caça ao Tesouro Pirabrinca com baú de tesouro"
               fill
               sizes="(max-width: 1024px) 90vw, 420px"
