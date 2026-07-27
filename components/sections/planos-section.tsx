@@ -9,6 +9,7 @@ import { WhatsAppButton } from "@/components/layout/whatsapp-button";
 import { planos } from "@/features/planos";
 import { fadeUp, staggerContainer, revealOnView } from "@/lib/motion";
 import { cn } from "@/lib/utils";
+import { assetPath } from "@/lib/utils";  
 
 export function PlanosSection() {
   return (
@@ -29,7 +30,7 @@ export function PlanosSection() {
         >
           <div className="relative aspect-[16/7] w-full">
             <Image
-              src="/images/planos.jpg"
+              src={assetPath("/images/planos.jpg")}
               alt="Resumo visual dos planos Pirabrinca: Rio Piracicaba, Rua do Porto e Mirante"
               fill
               sizes="(max-width: 1024px) 90vw, 900px"
